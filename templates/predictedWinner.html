@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            IPL Win Predictor | Predict Win
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imgs/ipl-logo.ico') }}">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/stellarnav.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+        <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+    
+        <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script> 
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+        <script src="https://kit.fontawesome.com/dca8b9d172.js" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/myjs.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/canvasjs.min.js')}}"></script>
+    </head>
+
+    <body>
+        
+        <div class="mainPageHeader">
+            <div class="mr437logo">
+                <a href="https://github.com/DJDarkCyber" target="_blank" rel="noopener noreferrer" >
+                    <img src="{{ url_for('static', filename='imgs/mr437logo.png') }}" alt="" style="width: 220px; height: 200px;">
+                </a>
+            </div>
+            <div class="mainPageHeaderCont">
+            <a href="{{ url_for('indexPage') }}">
+                <div class="headerLetCont">
+                    Home
+                </div>
+            </a>
+            
+            <a href="https://github.com/DJDarkCyber" target="_blank" rel="noopener noreferrer">
+                <div class="headerLetCont">
+                    Github
+                </div>
+            </a>
+
+            <a href="https://github.com/DJDarkCyber" target="_blank" rel="noopener noreferrer">
+                <div class="headerLetCont">
+                    About Us
+                </div>
+            </a>
+            </div>
+        </div>
+
+        <div class="predictOptionArea">
+            <div class="getpredictOption">
+                <h2 style="font-weight: 1000; color: white; display: flex; place-items: center; place-content: center; flex-direction: column;">The Predicted Winner Is <br> <div style="margin-top: 10px; color: skyblue; font-size: larger;">"{{win}}"</div></h2>
+            </div>
+        </div>
+
+
+        <script>
+            window.onload = function () {
+
+
+            var chart1 = new CanvasJS.Chart("chartContainer1", {
+                exportEnabled: true,
+                backgroundColor: "transparent",
+                animationEnabled: true,
+                title:{
+                    text: "No.Of Wins Among Two Teams"
+                },
+                legend:{
+                    cursor: "pointer",
+                    itemclick: explodePie
+                },
+                data: [{
+                    type: "pie",
+                    // showInLegend: true,
+                    
+                    toolTipContent: "{label}: <strong>{y}</strong> wins",
+                    indexLabel: "{label} - {y}%",
+                    dataPoints: [
+                            { y: parseInt({{team1Wins}}), label: {{team1 | tojson}}, exploded: true },
+                            { y: parseInt({{team2Wins}}), label: {{team2 | tojson}}}
+                    ]
+                }]
+            });
+            chart1.render();
+            }
+
+            function explodePie (e) {
+                if(typeof (e.dataSeries.dataPoints[e.dataPointIndex].exploded) === "undefined" || !e.dataSeries.dataPoints[e.dataPointIndex].exploded) {
+                    e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+                } else {
+                    e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+                }
+                e.chart1.render();
+
+            }
+
+        </script>
+
+
+<script>
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer2", {
+        zoomEnabled:true,
+        backgroundColor: "transparent",
+        exportEnabled: true,
+        animationEnabled: true,
+        title:{
+            text: "IPL Win Prediction"
+        },
+        subtitles: [{
+            text: "Click Legend to Hide or Unhide Data Series"
+        }], 
+        axisX: {
+            title: "Teams"
+        },
+        axisY: {
+            title: "Match Counts",
+            titleFontColor: "#4F81BC",
+            lineColor: "#4F81BC",
+            labelFontColor: "#4F81BC",
+            tickColor: "#4F81BC",
+            includeZero: true
+        },
+            toolTip: {
+                shared: true
+            },
+        legend: {
+            cursor: "pointer",
+            itemclick: toggleDataSeries
+        },
+        data: [{
+            type: "column",
+            name: "Wins against opponent",
+            showInLegend: true,      
+            yValueFormatString: "#,##0.# Matches",
+            dataPoints: [
+                { label: {{team1 | tojson}},  y: parseInt({{team1Wins}}) },
+                { label: {{team2 | tojson}}, y: parseInt({{team2Wins}}) },
+            ]
+        },
+        {
+            type: "column",
+            name: "Mathes Played in this venue",
+            // axisYType: "secondary",
+            showInLegend: true,
+            yValueFormatString: "#,##0.# Matches",
+            dataPoints: [
+                { label:  {{team1 | tojson}}, y: parseInt({{venue_team1}}) },
+                { label: {{team2 | tojson}}, y: parseInt({{venue_team2}}) },
+            ]
+        },
+        {
+            type: "column",
+            name: "Total wins in this venue",
+            // axisYType: "secondary",
+            showInLegend: true,
+            yValueFormatString: "#,##0.# Matches",
+            dataPoints: [
+                { label:  {{team1 | tojson}}, y: parseInt({{venue_team1_wins}}) },
+                { label: {{team2 | tojson}}, y: parseInt({{venue_team2_wins}}) },
+            ]
+        },
+        {
+            type: "column",
+            name: "Total wins in this venue against opponent",
+            // axisYType: "secondary",
+            showInLegend: true,
+            yValueFormatString: "#,##0.# Matches",
+            dataPoints: [
+                { label:  {{team1 | tojson}}, y: parseInt({{team1_venue_win}}) },
+                { label: {{team2 | tojson}}, y: parseInt({{team2_venue_win}}) },
+            ]
+        },
+        
+
+        ]
+    });
+    chart.render();
+    
+    function toggleDataSeries(e) {
+        if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+            e.dataSeries.visible = false;
+        } else {
+            e.dataSeries.visible = true;
+        }
+        e.chart.render();
+    }
+    
+    }
+    </script>
+        
+    
+
+
+        <h1 style="text-align: center; margin-top: 80px; color: darkblue; font-weight: 1000;">Graphical Display</h1>
+
+    <div class="graphArea">
+        <div id="chartContainer2" style="height: 500px; width: 100%; margin-top: 120px;" class="wow zoomInDown"></div>
+    </div>
+
+   
+
+    </body>
+
+</html>

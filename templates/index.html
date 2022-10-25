@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            IPL Win Predictor | Home
+        </title>
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imgs/ipl-logo.ico') }}">
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/normalize.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/stellarnav.min.css')}}">
+        <link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+        <link href="{{ url_for('static',filename='css/bootstrap.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/font-awesome.min.css')}}" rel="stylesheet">
+        <link href="{{ url_for('static',filename='css/responsive.css')}}" rel="stylesheet">
+    
+        <script src="{{ url_for('static',filename='js/vendor/modernizr-2.8.3.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-1.12.4.min.js')}}"></script> 
+        <script src="{{ url_for('static',filename='js/vendor/bootstrap.min.js')}}"></script>
+        <script src="https://kit.fontawesome.com/dca8b9d172.js" crossorigin="anonymous"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.easing.1.3.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery-migrate-1.2.1.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/vendor/jquery.appear.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/owl.carousel.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellar.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/wow.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/stellarnav.min.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/contact-form.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/jquery.sticky.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+        <script src="{{ url_for('static',filename='js/myjs.js')}}"></script>
+
+
+    </head>
+
+    <body>
+        
+        <div class="mainPageHeader">
+            <div class="mr437logo">
+                <a href="https://github.com/DJDarkCyber" target="_blank" rel="noopener noreferrer" >
+                    <img src="{{ url_for('static', filename='imgs/mr437logo.png') }}" alt="" style="width: 220px; height: 200px;">
+                </a>
+            </div>
+            <div class="mainPageHeaderCont">
+                <a href="{{ url_for('indexPage') }}">
+                    <div class="headerLetCont">
+                        Home
+                    </div>
+                </a>
+                
+                <a href="https://github.com/DJDarkCyber" target="_blank" rel="noopener noreferrer">
+                    <div class="headerLetCont">
+                        Github
+                    </div>
+                </a>
+    
+                <a href="https://github.com/DJDarkCyber" target="_blank" rel="noopener noreferrer">
+                    <div class="headerLetCont">
+                        About Us
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="mainOptionArea">
+            
+            <div class="options wow swing">
+                <a href="{{ url_for('predictWinner') }}">
+                    <div style="width: 100%; height: 100%">
+                        <div class="buttonNut">
+                            <i class="fa-solid fa-circle-dot"></i>
+                        </div>
+
+                        <div class="optionTextCont">
+                            <div class="text3dShadow">
+                                Predict IPL Winning Team
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+
+            <div class="options wow swing">
+                <a href="">
+                    <div style="width: 100%; height: 100%">
+                        <div class="buttonNut">
+                            <i class="fa-solid fa-circle-dot"></i>
+                        </div>
+
+                        <div class="optionTextCont">
+                            <div class="text3dShadow">
+                                Coming Soon
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="options wow swing">
+                <a href="">
+                    <div style="width: 100%; height: 100%">
+                        <div class="buttonNut">
+                            <i class="fa-solid fa-circle-dot"></i>
+                        </div>
+
+                        <div class="optionTextCont">
+                            <div class="text3dShadow">
+                                Coming Soon
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+
+    </body>
+
+</html>

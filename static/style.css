@@ -1,0 +1,292 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-image: url("../static/imgs/abstract-wallpaper-20071915361652-scaled.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;;
+    background-attachment: fixed;
+}
+
+
+
+/* CSS */
+.button-30 {
+    /* align-items: center; */
+    appearance: none;
+    background-color: #FCFCFD;
+    border-radius: 4px;
+    border-width: 0;
+    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #36395A;
+    cursor: pointer;
+    /* display: inline-flex; */
+    font-family: "JetBrains Mono",monospace;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s,transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow,transform;
+    font-size: 18px;
+  }
+  
+  .button-30:focus {
+    box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  }
+  
+  .button-30:hover {
+    box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+    transform: translateY(-2px);
+  }
+  
+  .button-30:active {
+    box-shadow: #D6D6E7 0 3px 7px inset;
+    transform: translateY(2px);
+  }
+
+
+/* CSS */
+.button-19 {
+  appearance: button;
+  background-color: #1899D6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.button-19:after {
+  background-clip: padding-box;
+  background-color: #1CB0F6;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.button-19:main,
+.button-19:focus {
+  user-select: auto;
+}
+
+.button-19:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.button-19:disabled {
+  cursor: auto;
+}
+
+
+.mainPageHeader{
+    width: 100%;
+    height: 90px;
+    background-color: rgba(82, 82, 82, 0.4);
+    display: flex;
+    right: 0px;
+    place-items: center;
+    place-content: center;
+    /* flex-direction: column; */
+    text-align: right;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+}
+
+.mainOptionArea{
+    /* background-color: red; */
+    width: 100%;
+    height: 400px;
+    margin-top: 10%;
+    position: absolute;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    text-align: right;
+}
+
+.options{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+    background-color: rgb(238, 241, 245);
+    width: 300px;
+    height: 300px;
+    margin-left: 120px;
+    margin-right: 120px;
+    border-radius: 5px;
+}
+
+.options:hover{
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+.options:active{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+.buttonNut{
+    display: flex;
+    place-content: center;
+    place-items: center;
+    width: 100%;
+    height: 30px;
+    /* background-color: aqua; */
+}
+
+.headerLetCont{
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.mainPageHeaderCont{
+  /* background-color: red; */
+    display: flex;
+    position: absolute;
+    flex-direction: row;
+    text-align: right;
+    right: 0px;
+    font-size: 18px;
+    font-weight: 800;
+    margin-right: 60px;
+}
+
+.mr437logo{
+  /* background-color: red; */
+}
+
+.optionTextCont{
+    text-decoration: none;
+    /* background-color: red; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    /* font-size: large; */
+    /* color: rgb(25, 133, 255); */
+}
+.optionTextCont{
+    text-decoration: none;
+}
+.text3dShadow{
+    /* position: absolute; */
+    text-decoration: none;
+    display: flex;
+    place-content: center;
+    margin: 10px;
+    margin-top: -30px;
+    font-size: 34px;
+    font-weight: 1000;
+    color: rgb(38, 157, 255);
+    text-align: center;
+
+  text-shadow: 0 1px 0 hsl(174, 5%, 80%), 0 2px 0 hsl(174, 5%, 75%),
+    0 3px 0 hsl(174, 5%, 70%), 0 4px 0 hsl(174, 5%, 66%),
+    0 5px 0 hsl(174, 5%, 64%), 0 6px 0 hsl(174, 5%, 62%),
+    0 7px 0 hsl(174, 5%, 61%), 0 8px 0 hsl(174, 5%, 60%),
+    0 0 5px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.2),
+    0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.2), 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.text3dShadow:hover{
+    text-decoration: none;
+    font-size: 36px;
+    
+}
+
+.predictOptionArea{
+  display: flex;
+    background-color: rgba(0, 0, 0, 0.637);
+    width: 96%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-top: 40px;
+    height: 600px;
+    border-radius: 10px;
+    /* filter: blur(8px); */
+}
+
+.getpredictOption{
+    font-size: medium;
+    font-weight: 800;
+    color: rgb(7, 164, 255);
+    padding: 50px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    place-content: center;
+}
+
+.perdictOptionCont{
+    font-weight: 500;
+    color: skyblue;
+    margin-bottom: 20px;
+    margin-top: 3px;
+}
+
+
+.predictOptionButton{
+    width: 450px;
+    height: 30px;
+}
+
+.submitButtonPredict{
+    width: 120px;
+    height: 40px;
+    color: white;
+}
+
+.graphArea{
+  width: 96%;
+  margin-left: 2%;
+  margin-right: 2%;
+  height: 800px;
+  margin-top: 80px;
+  background-color: rgba(0, 0, 0, 0.05);
+  display: flex;
+}
