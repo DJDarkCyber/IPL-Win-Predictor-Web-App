@@ -28,10 +28,10 @@ DataSet Used >> https://www.kaggle.com/datasets/amanullahkhan9093/ipl-dataset-20
 
 `git clone https://github.com/DJDarkCyber/IPL-Win-Predictor-Web-App.git`
 
-`pip install -r requirements.txt`
+`cd  IPL-Win-Predictor-Web-App && pip install -r requirements.txt`
 
 ## Running
 
-`cd  IPL-Win-Predictor-Web-App && python strtServer.py`
+`python strtServer.py`
 
 Open Web-Browser and navigate to http://127.0.0.1:5000/
