@@ -1,4 +1,4 @@
-from sklearn.ensemble import GradientBoostingClassifier
+from sklearn.ensemble import RandomForestClassifier
 import pandas as pd
 import pickle
 
@@ -8,7 +8,7 @@ def trainModel():
     X_train = df_ipl.drop("WinningTeam", axis=1)
     y_train = df_ipl["WinningTeam"]
 
-    model = GradientBoostingClassifier()
+    model = RandomForestClassifier()
     model.fit(X_train, y_train)
 
     pickle.dump(model, open("data/mymodel.pkl", "wb"))
